@@ -1,0 +1,20 @@
+﻿@model Note
+
+@{
+    ViewData["Title"] = "Create Note";
+}
+<h1>Create Note</h1>
+<form method="post" asp-controller="Note">
+    <div class="noteCreationContainer">
+        <label class="lb_name" asp-for="Name">Name:</label>
+        <input class="text_name" asp-for="Name" type="text" placeholder="Enter Name" required />
+        <label class="lb_description" asp-for="Description">Description: </label>
+
+        <textarea class="form_edit_description" id="textArea_note_description" 
+            asp-for="Description" type="text" placeholder=" Enter description" required></textarea>
+
+        <label class="lb_tags" asp-for="Tags">Tags: </label>
+        <input class="text_tags" asp-for="Tags" type="text" placeholder="Enter Tags" required />
+        <button class="btn_confirm" id="note_confirm" type="submit" asp-controller="Note" asp-action="Create">Create</button>
+    </div>
+</form>

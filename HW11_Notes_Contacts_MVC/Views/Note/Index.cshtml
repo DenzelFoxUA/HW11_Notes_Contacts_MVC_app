@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Note>
+
+@{
+    ViewData["Title"] = "Notes";
+}
+<div class="mainNotesContainer">
+    <form method="post" asp-controller="Note">
+        <button class="btn_Attention" type="submit" asp-controller="Note" asp-action="Create"> + New Note</button>
+    </form>
+
+    <h1 class="titleMain">Notes List</h1>
+
+    <form method="get">
+        <div class="listOfNotesContainer">
+            @foreach (var item in Model)
+            {
+                <div class="listUnit">
+                    <h2>Note @item.Id</h2>
+                    <ul class="notesList">
+                        <li><h4>@item.Name</h4></li>
+                        <li><h5>@item.CreationDate</h5></li>
+                    </ul>
+                    <button class="btn-Show" asp-controller="Note" asp-route-id="@item.Id" asp-action="ShowNote">Show</button>
+                    <button class="btn-Edit" asp-route-id="@item.Id" asp-controller="Note" asp-action="Edit">Edit</button>
+                </div>
+            }
+        </div>
+    </form>
+</div>
+

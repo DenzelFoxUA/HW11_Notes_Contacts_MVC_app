@@ -1,0 +1,20 @@
+﻿@model Contact
+
+@{
+    ViewData["Title"] = "Contact";
+}
+
+ <form method="post" asp-controller="Contact">
+    <div class="contactShowContainer">
+        <label class="lb_contact_name" asp-for="Name">Name: @Model.Name</label>
+        <br/>
+        <label class="lb_contact_info" asp-for="Phone">Phone: @Model.Phone</label>
+        <label class="lb_contact_info" asp-for="PhoneAlternate">Phone Alternate: @Model.PhoneAlternate</label>
+        <label class="lb_contact_info" asp-for="Email">EM@il: @Model.Email</label>
+        <br/>
+        <label class="lb_contact_info" asp-for="Description">Description: </label>
+        <textarea  
+            class="contacts_edit_description" asp-for="Description" type="text" disabled> @Model.Description </textarea>
+
+    </div>
+ </form>

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Contact>
+
+@{
+    ViewData["Title"] = "Contacts";
+}
+<div class="mainContactsContainer">
+
+    <h1 class="titleMain">Contacts</h1>
+    <form method="post" asp-controller="Contact">
+        <button class="btn_Attention" type="submit" asp-controller="Contact" asp-action="Create"> + New Contact</button>
+    </form>
+    <form method="get">
+
+        <div class="listOfContactsContainer">
+
+            @foreach (var item in Model)
+            {
+                <div class="contactUnit">
+                   <button class="btn-contactShow" id="btn_contactShow" asp-controller="Contact" 
+                   asp-route-id="@item.Id" asp-action="ShowContact">@item.Name</button>
+
+                    <button class="btn-Edit" id="btn_contactEdit" asp-route-id="@item.Id" asp-controller="Contact" asp-action="Edit">Edit</button>
+                    <form method="post" asp-controller="Contact">
+                        <button class="btn-Delete" id="btn_contactDelete" type="submit" 
+                        asp-route-id="@item.Id" asp-controller="Contact" asp-action="DeleteContact">Delete</button>
+                    </form>
+                </div>
+            }
+        </div>
+    </form>
+</div>

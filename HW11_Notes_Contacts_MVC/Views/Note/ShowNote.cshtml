@@ -1,0 +1,21 @@
+﻿@model Note
+
+@{
+    ViewData["Title"] = "Show Note";
+}
+
+ <form method="post" asp-controller="Note">
+    <div class="noteCreationContainer">
+        <label class="lb_name" asp-for="Name">Name: @Model.Name</label>
+
+
+        <label class="lb_description" asp-for="Description">Description: </label>
+        <textarea class="form_edit_description" asp-for="Description" type="text" disabled> @Model.Description </textarea>
+
+
+        <label class="lb_tags" asp-for="Tags">Tags: <p class="text_tags">@Model.Tags</p></label>
+        <label class="creationDate">Created At: @Model.CreationDate</label>
+
+        <button class="btn-Delete" id="btn_delete" type="submit" asp-route-id="@Model.Id" asp-controller="Note" asp-action="DeleteNote">Delete</button>
+    </div>
+ </form>

@@ -1,0 +1,218 @@
+﻿
+
+.listUnit {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr 1fr;
+    gap: 10px 10px;
+    list-style-type: none;
+}
+
+.noteContainder {
+    
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 200px 50px 50px;
+    grid-auto-rows: 100px;
+    list-style-type: none;
+}
+
+.notesList {
+    list-style-type: none;
+}
+
+
+.btn-Show {
+    color: white;
+    background-color: blueviolet;
+    background-size: contain;
+    padding: 10px 25px;
+    margin: 2px 2px;
+    font-size: 24px;
+    font-style: normal;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+    .btn-Show:hover {
+        color: blueviolet;
+        background-color: white;
+        background-size: contain;
+        padding: 10px 25px;
+        margin: 2px 2px;
+        font-size: 24px;
+        font-style: normal;
+        border: 2px solid blueviolet;
+        box-shadow: blueviolet 0px 0px 10px 2px;
+        border-radius: 12px;
+    }
+
+.btn-Edit {
+    color: white;
+    background-color: rgb(27, 29, 36);
+    background-size: contain;
+    padding: 10px 25px;
+    margin: 2px 2px;
+    font-size: 24px;
+    font-style: normal;
+    border: 2px solid white;
+    border-radius: 8px;
+}
+
+    .btn-Edit:hover {
+        color: orangered;
+        background-color: rgb(27, 29, 36);
+        background-size: contain;
+        padding: 10px 25px;
+        margin: 2px 2px;
+        font-size: 24px;
+        font-style: normal;
+        border: 2px solid orangered;
+        box-shadow: orangered 0px 0px 10px 2px;
+        border-radius: 12px;
+    }
+
+
+
+
+
+/*showPage*/
+
+.noteShowContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+}
+
+.ls_NoteName {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: underline;
+    
+}
+
+.creationDate {
+    font-size: 18px;
+}
+
+.ls_NoteDescribtion {
+    padding: 20px 50px;
+    background-color: gainsboro;
+    border: 2px solid rgb(128, 128, 128);
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.ls_NoteDate {
+    font-size: 18px;
+}
+
+.ls_NoteTags{
+    color: blueviolet;
+    font-size: 18px
+}
+
+#btn_delete {
+    grid-area: 5 / 1 / 5 / 1;
+}
+
+.btn-Delete {
+    color: white;
+    background-color: blueviolet;
+    background-size: contain;
+    padding: 10px 25px;
+    margin: 2px 2px;
+    font-size: 24px;
+    font-style: normal;
+    border: 2px solid white;
+    border-radius: 8px;
+    
+}
+
+    .btn-Delete:hover {
+        color: blueviolet;
+        background-color: white;
+        background-size: contain;
+        padding: 10px 25px;
+        margin: 2px 2px;
+        font-size: 24px;
+        font-style: normal;
+        border: 2px solid blueviolet;
+        box-shadow: blueviolet 0px 0px 10px 2px;
+        border-radius: 12px;
+    }
+/*edit*/
+.noteCreationContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+}
+
+.lb_name {
+    font-size:24px;
+    grid-area: 1 / 1 / 3 / 2;
+}
+
+.text_name {
+    grid-area: 1 / 2 / 1 / 5;
+    font-size: 24px;
+}
+
+.lb_description {
+    grid-area: 2 / 1 / 2 / 1;
+    font-size: 24px;
+}
+
+.contacts_edit_description {
+    
+    font-size: 18px;
+    height: 150px;
+    line-height:24px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px thin rgb(0, 0, 0, 0,00);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+.form_edit_description {
+    grid-area: 3 / 1 / 3 / 7;
+    font-size: 18px;
+    height: 150px;
+    line-height: 24px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px thin rgb(0, 0, 0, 0,00);
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+
+.lb_tags {
+    grid-area: 4 / 1 / 4 / 2;
+    font-size: 24px;
+}
+
+.text_tags {
+    grid-area: 4 / 2 / 4 / 7;
+    font-size: 18px;
+    color: blueviolet;
+}
+
+.btn_confirm {
+    
+    color: white;
+    background-color: blueviolet;
+    background-size: contain;
+    padding: 10px 25px;
+    margin: 2px 10px;
+    font-size: 24px;
+    font-style: normal;
+    border: 2px solid white;
+}
+
+#note_confirm {
+    grid-area: 5 / 1 / 5 / 1;
+}

@@ -1,0 +1,31 @@
+﻿@model Contact
+
+ @{
+         ViewData["Title"] = "Edit Contact";
+ }
+<h1>Update Contact</h1>
+<form method="post" asp-controller="Contact">
+    <div class="contactCreationContainer">
+        <label asp-for="Name">Name: 
+            <input asp-for="Name" type="text" placeholder="@Model.Name" required />
+        </label>
+
+        <label asp-for="Phone">Phone: 
+            <input asp-for="Phone" type="text" placeholder="@Model.Phone" required />
+        </label>
+
+        <label asp-for="PhoneAlternate">PhoneAlternate: 
+            <input asp-for="PhoneAlternate" type="text" placeholder="@Model.PhoneAlternate" />
+        </label>
+
+        <label asp-for="Email">Email: 
+            <input asp-for="Email" type="text" placeholder="@Model.Email" required />
+        </label>
+        <label asp-for="Description">Description: </label>
+        <textarea class="contacts_edit_description" asp-for="Description" type="text" placeholder="@Model.Description" required></textarea>
+        
+
+
+        <button class="btn_confirm" type="submit" asp-controller="Contact" asp-action="Edit">Update</button>
+    </div>
+</form>

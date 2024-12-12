@@ -1,0 +1,23 @@
+﻿@model Note;
+
+
+<h1>Edit Note</h1>
+<form method="post" asp-controller="Note">
+    
+    <div class="noteCreationContainer">
+         <label class="lb_name" asp-for="Name">Name:</label>
+        <input class="text_name" asp-for="Name" type="text" value="@Model.Name" required />
+            
+        
+        <label class="lb_description" asp-for="Description">Description: </label>
+        <textarea class="form_edit_description" id="textArea_note_description" 
+            asp-for="Description" type="text" required> @Model.Description </textarea>
+            
+
+        <label class="lb_tags" asp-for="Tags">Tags: </label>
+        <input class="text_tags" asp-for="Tags" type="text" value="@Model.Tags" required />
+            
+        
+        <button class="btn_confirm" type="submit" asp-controller="Note" asp-action="Edit">Update</button>
+    </div>
+</form>

@@ -16,6 +16,7 @@
         <label class="lb_tags" asp-for="Tags">Tags: <p class="text_tags">@Model.Tags</p></label>
         <label class="creationDate">Created At: @Model.CreationDate</label>
 
-        <button class="btn-Delete" id="btn_delete" type="submit" asp-route-id="@Model.Id" asp-controller="Note" asp-action="DeleteNote">Delete</button>
+        <button class="btn-Delete" id="btn_delete" type="submit" asp-route-id="@Model.Id" 
+        asp-controller="Note" asp-action="DeleteNote">Delete</button>
     </div>
  </form>

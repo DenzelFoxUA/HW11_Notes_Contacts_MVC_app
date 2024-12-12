@@ -28,6 +28,7 @@ namespace HW11_Notes_Contacts_MVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Contact contact)
         {
 
@@ -47,14 +48,14 @@ namespace HW11_Notes_Contacts_MVC.Controllers
 
             if (id == null)
             {
-                return Error();
+                return NotFound();
             }
 
             var contact = _context.Contacts.Find(id);
 
             if (contact == null)
             {
-                return Error();
+                return NotFound();
             }
             return View(contact);
         }
@@ -63,13 +64,13 @@ namespace HW11_Notes_Contacts_MVC.Controllers
         {
             if (id == null || id == 0)
             {
-                return Error();
+                return NotFound();
             }
             var contact = _context.Contacts.Find(id);
 
             if (contact == null)
             {
-                return Error();
+                return NotFound();
             }
 
             return View(contact);
@@ -97,17 +98,12 @@ namespace HW11_Notes_Contacts_MVC.Controllers
             var contact = _context.Contacts.Find(id);
             if (contact == null)
             {
-                return Error();
+                return NotFound();
             }
             _context.Contacts.Remove(contact);
             _context.SaveChanges();
 
             return RedirectToAction("Index");
-        }
-
-        public IActionResult Error()
-        {
-            return View();
         }
 
     }

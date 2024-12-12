@@ -29,6 +29,7 @@ namespace HW11_Notes_Contacts_MVC.Controllers
         }
 
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public IActionResult Create(Note note)
         {
 
